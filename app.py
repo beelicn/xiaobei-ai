@@ -1,4 +1,19 @@
 import streamlit as st
+
+# 👇 直接复制粘贴在代码最前面！
+st.markdown("""
+<style>
+/* 彻底隐藏所有Streamlit元素 */
+#MainMenu {visibility: hidden !important; display: none !important;}
+footer {visibility: hidden !important; display: none !important;}
+header {visibility: hidden !important; display: none !important;}
+.stDeployButton {display:none !important;}
+button[title="View fullscreen"] {display:none !important;}
+.viewerBadge_container__1QSob {display:none !important;}
+</style>
+""", unsafe_allow_html=True)
+
+# 👇 下面是你原来的所有代码，不用动import streamlit as st
 import os
 from openai import OpenAI
 from docx import Document
@@ -1111,3 +1126,4 @@ if current_tab["id"] in RENDER_FUNC_MAP:
     RENDER_FUNC_MAP[current_tab["id"]]()
 else:
     st.warning(lang["func_not_found"])
+import streamlit as st
