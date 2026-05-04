@@ -1,19 +1,3 @@
-import streamlit as st
-
-# 👇 直接复制粘贴在代码最前面！
-st.markdown("""
-<style>
-/* 彻底隐藏所有Streamlit元素 */
-#MainMenu {visibility: hidden !important; display: none !important;}
-footer {visibility: hidden !important; display: none !important;}
-header {visibility: hidden !important; display: none !important;}
-.stDeployButton {display:none !important;}
-button[title="View fullscreen"] {display:none !important;}
-.viewerBadge_container__1QSob {display:none !important;}
-</style>
-""", unsafe_allow_html=True)
-
-# 👇 下面是你原来的所有代码，不用动import streamlit as st
 import os
 from openai import OpenAI
 from docx import Document
@@ -22,6 +6,7 @@ from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN
 import io
 from PyPDF2 import PdfReader
+import streamlit as st
 
 # ==============================================================================
 # 🌐 【多语言配置区】中英文语言包，新增/修改翻译直接改这里
@@ -43,7 +28,7 @@ LANG_PACK = {
         # 侧边栏
         "sidebar_title": "功能导航",
         "select_func": "选择功能",
-        "sidebar_footer": "✅修复了一些已知问题ㅤㅤㅤ☺️版本：3.0 ㅤㅤㅤ©️beelicn.com",
+        "sidebar_footer": "✅修复了一些已知问题ㅤㅤㅤ☺️版本：3.1 ㅤㅤㅤ©️beelicn.com",
         "lang_select": "选择语言",
         # 功能菜单（label+副标题）
         "menu_search_label": "💻 全网报告搜索",
@@ -91,7 +76,7 @@ LANG_PACK = {
         "generate_ref_tip": "【可选】上传自有参考资料/报告模板（生成内容优先匹配参考资料的格式与规范）",
         "generate_ref_upload": "上传参考资料TXT/DOCX文档",
         "generate_ref_preview": "预览参考资料内容",
-        "generate_btn": "📝 生成咨询级行业报告",
+        "generate_btn": "📝 生成行业报告",
         "generate_loading": "正在生成{track}赛道专属行业报告...",
         "generate_name_empty": "请输入目标行业/赛道名称",
         "generate_ref_rule": "【参考资料要求】生成内容必须优先参考以下资料的格式规范、行业定义、数据口径：",
@@ -171,7 +156,7 @@ LANG_PACK = {
         # Sidebar
         "sidebar_title": "Function Navigation",
         "select_func": "Select Function",
-        "sidebar_footer": "✅ Fixed known issuesㅤㅤㅤㅤ☺️Version: 3.0 ㅤㅤ©️beelicn.com",
+        "sidebar_footer": "✅ Fixed known issuesㅤㅤㅤㅤ☺️Version: 3.1 ㅤㅤ©️beelicn.com",
         "lang_select": "Select Language",
         # Menu Config
         "menu_search_label": "💻 Full-web Report Search",
@@ -1068,7 +1053,7 @@ st.set_page_config(
 )
 
 # ==============================================
-# 🔥 已自动添加：彻底隐藏所有 Streamlit 痕迹
+# 🔥 终极优化版：零顶部空白+保留侧边栏切换键+隐藏所有多余元素
 # ==============================================
 st.markdown("""
 <style>
@@ -1078,12 +1063,47 @@ st.markdown("""
 footer {visibility: hidden !important;}
 /* 隐藏右下角全屏按钮 */
 button[title="View fullscreen"] {visibility: hidden !important;}
-/* 隐藏顶部装饰条 */
-header {visibility: hidden !important;}
+/* 隐藏Streamlit Cloud的Deploy按钮 */
+.stDeployButton {display: none !important;}
 /* 隐藏滚动条，界面更干净 */
 ::-webkit-scrollbar {display: none !important;}
-/* 消除页面默认边距，紧凑美观 */
-.block-container {padding-top: 1rem; padding-bottom: 1rem;}
+
+/* 核心修复：将header高度压缩为0，只保留侧边栏切换按钮 */
+header {
+    height: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* 单独保留并定位侧边栏切换按钮，放在左上角不遮挡内容 */
+button[aria-label="Open sidebar"] {
+    position: fixed !important;
+    top: 1rem !important;
+    left: 1rem !important;
+    z-index: 9999 !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 50% !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 当侧边栏展开时，隐藏切换按钮（避免重复显示） */
+button[aria-label="Close sidebar"] {
+    display: none !important;
+}
+
+/* 彻底消除页面顶部边距，让内容顶格显示 */
+.block-container {
+    padding-top: 0 !important;
+    padding-bottom: 1rem !important;
+    max-width: 95% !important;
+}
+
+/* 调整主标题上边距，避免太贴顶 */
+h1 {
+    margin-top: 0.5rem !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -1126,4 +1146,3 @@ if current_tab["id"] in RENDER_FUNC_MAP:
     RENDER_FUNC_MAP[current_tab["id"]]()
 else:
     st.warning(lang["func_not_found"])
-import streamlit as st
