@@ -28,7 +28,7 @@ LANG_PACK = {
         # 侧边栏
         "sidebar_title": "功能导航",
         "select_func": "选择功能",
-        "sidebar_footer": "✅修复了一些已知问题ㅤㅤㅤ☺️版本：3.1 ㅤㅤㅤ©️beelicn.com",
+        "sidebar_footer": "✅修复了一些已知问题ㅤㅤㅤ☺️版本：测试版 ㅤㅤㅤ©️beelicn.com",
         "lang_select": "选择语言",
         # 功能菜单（label+副标题）
         "menu_search_label": "💻 全网报告搜索",
@@ -156,7 +156,7 @@ LANG_PACK = {
         # Sidebar
         "sidebar_title": "Function Navigation",
         "select_func": "Select Function",
-        "sidebar_footer": "✅ Fixed known issuesㅤㅤㅤㅤ☺️Version: 3.1 ㅤㅤ©️beelicn.com",
+        "sidebar_footer": "✅ Fixed known issuesㅤㅤㅤㅤ☺️Version: Beta ㅤㅤ©️beelicn.com",
         "lang_select": "Select Language",
         # Menu Config
         "menu_search_label": "💻 Full-web Report Search",
