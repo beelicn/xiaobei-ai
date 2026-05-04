@@ -1052,6 +1052,26 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# ==============================================
+# 🔥 已自动添加：彻底隐藏所有 Streamlit 痕迹
+# ==============================================
+st.markdown("""
+<style>
+/* 隐藏右上角Streamlit菜单 */
+#MainMenu {visibility: hidden !important;}
+/* 隐藏底部Built with Streamlit水印 */
+footer {visibility: hidden !important;}
+/* 隐藏右下角全屏按钮 */
+button[title="View fullscreen"] {visibility: hidden !important;}
+/* 隐藏顶部装饰条 */
+header {visibility: hidden !important;}
+/* 隐藏滚动条，界面更干净 */
+::-webkit-scrollbar {display: none !important;}
+/* 消除页面默认边距，紧凑美观 */
+.block-container {padding-top: 1rem; padding-bottom: 1rem;}
+</style>
+""", unsafe_allow_html=True)
+
 # 2. 页面主标题
 st.title(lang["main_title"])
 st.markdown("---")
