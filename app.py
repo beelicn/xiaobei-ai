@@ -17,8 +17,9 @@ from pdf2docx import Converter
 LANG_PACK = {
     "zh": {
         # 全局通用
-        "page_title": "小倍AI助手",
-        "main_title": "🙂 小倍AI助手",
+        "page_title": "小倍AI | Xiaobei AI",
+        "main_title": "小倍AI | Beeli",
+        "subtitle": "AI-Powered Business Intelligence",
         "warning": "警告",
         "error": "错误",
         "success": "完成",
@@ -31,31 +32,44 @@ LANG_PACK = {
         # 侧边栏
         "sidebar_title": "功能导航",
         "select_func": "选择功能",
-        "sidebar_footer": "✅修复了一些已知问题ㅤㅤㅤ☺️版本：测试版 ㅤㅤㅤ©️beelicn.com",
+        "sidebar_copyright": "© 2026 Xiaobei AI",
+        "sidebar_version": "测试版4.0",
         "lang_select": "选择语言",
+        # 嵌入模式导航栏短标签
+        "nav_search": "搜索",
+        "nav_summary": "总结",
+        "nav_generate": "生成报告",
+        "nav_compare": "对比分析",
+        "nav_rewrite": "改写文档",
+        "nav_translate": "翻译",
+        "nav_pdf2word": "PDF转Word",
+        "nav_dashboard": "决策仪表盘",
+        "nav_assessment": "AI评估",
+        "nav_compliance": "合规溯源",
+        "nav_about": "关于",
         # 功能菜单（label+副标题）— 7个原有功能
-        "menu_search_label": "💻 全网报告搜索",
+        "menu_search_label": "全网报告搜索",
         "menu_search_sub": "🤔 小倍正在搜索报告中",
-        "menu_summary_label": "💡 文档总结/数据提取",
+        "menu_summary_label": "文档总结/数据提取",
         "menu_summary_sub": "🤨 小倍正在分析你的文档",
-        "menu_generate_label": "📝 行业报告生成",
+        "menu_generate_label": "行业报告生成",
         "menu_generate_sub": "🤯 小倍正在生成你的报告",
-        "menu_compare_label": "📈 多文档竞品/赛道对比分析",
+        "menu_compare_label": "多文档竞品/赛道对比分析",
         "menu_compare_sub": "😁 小倍正在对比中",
-        "menu_rewrite_label": "✏️ 仿照模板改写文档",
+        "menu_rewrite_label": "仿照模板改写文档",
         "menu_rewrite_sub": "🧐 小倍正在改写你的文档",
-        "menu_translate_label": "🌐 商务文档翻译",
+        "menu_translate_label": "商务文档翻译",
         "menu_translate_sub": "😏 小倍翻译中",
-        "menu_pdf2word_label": "💾 无损PDF转Word",
+        "menu_pdf2word_label": "无损PDF转Word",
         "menu_pdf2word_sub": "😎 小倍PDF格式转换助手",
         # 新增功能菜单
-        "menu_about_label": "📖 关于本产品",
+        "menu_about_label": "关于本产品",
         "menu_about_sub": "产品方法论与设计理念",
-        "menu_assessment_label": "🏢 企业AI就绪度评估",
+        "menu_assessment_label": "企业AI就绪度评估",
         "menu_assessment_sub": "评估组织的AI准备情况",
-        "menu_compliance_label": "🛡️ AI合规与溯源",
+        "menu_compliance_label": "AI合规与溯源",
         "menu_compliance_sub": "可信度评分与合规机制",
-        "menu_dashboard_label": "📊 战略决策仪表盘",
+        "menu_dashboard_label": "战略决策仪表盘",
         "menu_dashboard_sub": "决策优先级矩阵与战略建议",
         # 赛道配置
         "track_general": "通用全行业",
@@ -163,7 +177,7 @@ LANG_PACK = {
 商业决策者面临信息过载、数据碎片化、专业报告获取成本高的困境。传统行业研究依赖人工搜集与整理，效率低下且容易遗漏关键信息。
 
 ### 二、解决方案
-小倍AI助手通过大语言模型与专业提示词工程，提供从报告搜索、文档分析、报告生成到竞品对比的一站式AI商业决策支持平台，大幅降低专业研究门槛。
+倍利助手通过大语言模型与专业提示词工程，提供从报告搜索、文档分析、报告生成到竞品对比的一站式AI商业决策支持平台，大幅降低专业研究门槛。
 
 ### 三、技术架构
 - **大模型层**：火山引擎豆包大模型（doubao-seed-2-0-pro），提供高质量语义理解与生成
@@ -217,6 +231,11 @@ LANG_PACK = {
         "compliance_source_consulting": "头部咨询/研究机构",
         "compliance_source_media": "权威财经/科技媒体",
         "compliance_source_unknown": "未标注来源",
+        "compliance_source_example_gov": "国家统计局、央行、证监会、国务院部门",
+        "compliance_source_example_listed": "上市公司年报、招股说明书、官方公告",
+        "compliance_source_example_consulting": "麦肯锡、BCG、贝恩、IDC、Gartner、四大",
+        "compliance_source_example_media": "财经媒体、科技媒体、行业自媒体",
+        "compliance_source_example_unknown": "未标注来源的数据/信息",
         "compliance_trace_flow": "用户输入 → 提示词工程（含合规规则注入） → 豆包大模型推理 → 合规后处理（可信度校验） → 最终输出",
         "compliance_switch_items": [
             "AI生成内容合规检查（自动检测虚构数据、不当引用）",
@@ -265,6 +284,11 @@ LANG_PACK = {
         "compliance_source_consulting": "头部咨询/研究机构",
         "compliance_source_media": "权威财经/科技媒体",
         "compliance_source_unknown": "未标注来源",
+        "compliance_source_example_gov": "国家统计局、央行、证监会、国务院部门",
+        "compliance_source_example_listed": "上市公司年报、招股说明书、官方公告",
+        "compliance_source_example_consulting": "麦肯锡、BCG、贝恩、IDC、Gartner、四大",
+        "compliance_source_example_media": "财经媒体、科技媒体、行业自媒体",
+        "compliance_source_example_unknown": "未标注来源的数据/信息",
         "compliance_trace_flow": "用户输入 → 提示词工程（含合规规则注入） → 豆包大模型推理 → 合规后处理（可信度校验） → 最终输出",
         "compliance_switch_items": [
             "AI生成内容合规检查（自动检测虚构数据、不当引用）",
@@ -277,11 +301,37 @@ LANG_PACK = {
         "ppt_footer": "小倍咨询级AI报告助手\n合规生成 | 数据可溯源",
         "ppt_end_page": "报告结束",
         "ai_empty_response": "AI生成内容为空，请重试~",
+        "search_info_waiting": "AI正在检索权威数据源，这可能需要15-30秒...",
+        "generate_info_waiting": "AI正在生成专业行业报告，这可能需要30-60秒...",
+        "pdf_conversion_failed": "PDF转换失败",
+        "compliance_col_score": "评分",
+        "compliance_col_level": "等级",
+        "compliance_col_source": "典型来源",
+        "about_metric_modules": "功能模块",
+        "about_metric_templates": "行业赛道模板",
+        "about_metric_languages": "支持语言",
+        "about_metric_formats": "输出格式",
+        "about_tech_indicators": "技术指标",
+        "compliance_switch_caption": "*以上开关在实际使用中可在生成报告前自由切换，当前为默认开启状态。",
+        "assessment_download_word": "📍 下载Word版评估报告",
+        "assessment_download_ppt": "📊 下载PPT版",
+        "assessment_word_filename": "AI就绪度评估报告",
+        "assessment_ppt_filename": "AI就绪度评估报告",
+        "assessment_ppt_title": "AI就绪度评估",
+        "assessment_company_default": "企业",
+        "search_empty_result": "未找到匹配的报告，试试其他关键词吧",
+        "search_ai_unavailable": "AI暂时无法响应，请稍后重试",
+        "search_idle_hint": "输入行业关键词，开始检索权威报告",
+        "summary_idle_hint": "上传TXT或DOCX文档，AI将自动分析核心内容",
+        "compare_idle_hint": "上传2份以上文档，AI将智能对比分析",
+        "rewrite_idle_hint": "上传模板和原文，AI将按模板风格改写",
+        "pdf2word_idle_hint": "上传PDF文件，无损转换为可编辑Word文档",
     },
     "en": {
         # Global General
-        "page_title": "Xiaobei AI Assistant",
-        "main_title": "🙂 Xiaobei AI Assistant",
+        "page_title": "Xiaobei AI | Xiaobei AI",
+        "main_title": "Xiaobei AI | Beeli",
+        "subtitle": "AI-Powered Business Intelligence",
         "warning": "Warning",
         "error": "Error",
         "success": "Success",
@@ -294,31 +344,44 @@ LANG_PACK = {
         # Sidebar
         "sidebar_title": "Function Navigation",
         "select_func": "Select Function",
-        "sidebar_footer": "✅ Fixed known issuesㅤㅤㅤㅤ☺️Version: Beta ㅤㅤ©️beelicn.com",
+        "sidebar_copyright": "© 2026 Xiaobei AI",
+        "sidebar_version": "Beta 4.0",
         "lang_select": "Select Language",
+        # Embed mode nav short labels
+        "nav_search": "Search",
+        "nav_summary": "Summary",
+        "nav_generate": "Generate Report",
+        "nav_compare": "Compare",
+        "nav_rewrite": "Rewrite",
+        "nav_translate": "Translate",
+        "nav_pdf2word": "PDF→Word",
+        "nav_dashboard": "Dashboard",
+        "nav_assessment": "AI Assessment",
+        "nav_compliance": "Compliance",
+        "nav_about": "About",
         # Menu Config — 7 original
-        "menu_search_label": "💻 Full-web Report Search",
+        "menu_search_label": "Full-web Report Search",
         "menu_search_sub": "🤔 Xiaobei is searching reports",
-        "menu_summary_label": "💡 Doc Sum/Data Extraction",
+        "menu_summary_label": "Doc Sum/Data Extraction",
         "menu_summary_sub": "🤨 Xiaobei is analyzing your document",
-        "menu_generate_label": "📝 Industry Report Generation",
+        "menu_generate_label": "Industry Report Generation",
         "menu_generate_sub": "🤯 Xiaobei is generating your report",
-        "menu_compare_label": "📈  Competitor Analysis",
+        "menu_compare_label": "Competitor Analysis",
         "menu_compare_sub": "😁 Xiaobei is comparing documents",
-        "menu_rewrite_label": "✏️ Template-based Rewrite",
+        "menu_rewrite_label": "Template-based Rewrite",
         "menu_rewrite_sub": "🧐 Xiaobei is rewriting your document",
-        "menu_translate_label": "🌐 Business Translation",
+        "menu_translate_label": "Business Translation",
         "menu_translate_sub": "😏 Xiaobei is translating",
-        "menu_pdf2word_label": "💾 Lossless PDF to Word",
+        "menu_pdf2word_label": "Lossless PDF to Word",
         "menu_pdf2word_sub": "😎 Xiaobei PDF Converter",
         # New menu items
-        "menu_about_label": "📖 About This Product",
+        "menu_about_label": "About This Product",
         "menu_about_sub": "Product Methodology & Design",
-        "menu_assessment_label": "🏢 Enterprise AI Readiness",
+        "menu_assessment_label": "Enterprise AI Readiness",
         "menu_assessment_sub": "Assess your org's AI readiness",
-        "menu_compliance_label": "🛡️ AI Compliance & Traceability",
+        "menu_compliance_label": "AI Compliance & Traceability",
         "menu_compliance_sub": "Credibility Scoring & Compliance",
-        "menu_dashboard_label": "📊 Strategic Dashboard",
+        "menu_dashboard_label": "Strategic Dashboard",
         "menu_dashboard_sub": "Decision Priority Matrix",
         # Industry Tracks
         "track_general": "General Industry",
@@ -495,6 +558,11 @@ Xiaobei AI Assistant leverages large language models and professional prompt eng
         "compliance_source_consulting": "Top Consulting / Research Institutions",
         "compliance_source_media": "Authoritative Financial / Tech Media",
         "compliance_source_unknown": "Unlabeled Source",
+        "compliance_source_example_gov": "National Bureau of Statistics, Central Bank, CSRC, State Council departments",
+        "compliance_source_example_listed": "Annual reports, prospectuses, official filings of listed companies",
+        "compliance_source_example_consulting": "McKinsey, BCG, Bain, IDC, Gartner, Big Four",
+        "compliance_source_example_media": "Financial media, tech media, industry self-media",
+        "compliance_source_example_unknown": "Data/information without source attribution",
         "compliance_trace_flow": "User Input → Prompt Engineering (Compliance Rules Injected) → Doubao LLM Inference → Compliance Post-processing (Credibility Check) → Final Output",
         "compliance_switch_items": [
             "AI Content Compliance Check (auto-detect fabricated data, improper citations)",
@@ -518,6 +586,31 @@ Xiaobei AI Assistant leverages large language models and professional prompt eng
         "ppt_footer": "Xiaobei Consulting AI Assistant\nCompliant Generation | Traceable Data",
         "ppt_end_page": "End of Report",
         "ai_empty_response": "AI generated empty content, please try again~",
+        "search_info_waiting": "AI is searching authoritative data sources, this may take 15-30 seconds...",
+        "generate_info_waiting": "AI is generating a professional industry report, this may take 30-60 seconds...",
+        "pdf_conversion_failed": "PDF conversion failed",
+        "compliance_col_score": "Score",
+        "compliance_col_level": "Level",
+        "compliance_col_source": "Typical Source",
+        "about_metric_modules": "Functional Modules",
+        "about_metric_templates": "Industry Track Templates",
+        "about_metric_languages": "Supported Languages",
+        "about_metric_formats": "Output Formats",
+        "about_tech_indicators": "Technical Indicators",
+        "compliance_switch_caption": "*These toggles can be freely switched before report generation; currently default ON.",
+        "assessment_download_word": "📍 Download Word Assessment Report",
+        "assessment_download_ppt": "📊 Download PPT Version",
+        "assessment_word_filename": "AI_Readiness_Assessment",
+        "assessment_ppt_filename": "AI_Readiness_Assessment",
+        "assessment_ppt_title": "AI Readiness Assessment",
+        "assessment_company_default": "Enterprise",
+        "search_empty_result": "No matching reports found. Try other keywords.",
+        "search_ai_unavailable": "AI is temporarily unavailable. Please try again.",
+        "search_idle_hint": "Enter industry keywords to search authoritative reports",
+        "summary_idle_hint": "Upload a TXT/DOCX document and AI will extract key insights",
+        "compare_idle_hint": "Upload 2+ documents for AI comparison",
+        "rewrite_idle_hint": "Upload a template and source document for AI-style rewriting",
+        "pdf2word_idle_hint": "Upload a PDF for lossless conversion to editable Word",
     }
 }
 
@@ -953,10 +1046,14 @@ TRACK_PROMPT_MAP = {
 
 MENU_LABELS = [item["label"] for item in MENU_CONFIG]
 MENU_MAP = {item["label"]: item for item in MENU_CONFIG}
+NAV_LABELS = [lang[f"nav_{item['id']}"] for item in MENU_CONFIG]
+NAV_TO_LABEL = {lang[f"nav_{item['id']}"]: item["label"] for item in MENU_CONFIG}
 
 client = OpenAI(
     base_url=os.getenv("ARK_BASE_URL", LOCAL_CONFIG["base_url"]),
     api_key=os.getenv("ARK_API_KEY", LOCAL_CONFIG["api_key"]),
+    timeout=120.0,
+    max_retries=2,
 )
 
 # ==============================================================================
@@ -967,16 +1064,16 @@ def ai_request(prompt, target_lang=None):
     try:
         if target_lang:
             if target_lang == "en":
-                prompt = f"Please respond in English only. {prompt}"
+                prompt = f"You are a professional English business consultant. Respond in English only. Keep output concise and well-structured. {prompt}"
             elif target_lang == "zh":
-                prompt = f"请用中文回答。{prompt}"
+                prompt = f"你是专业中文商业顾问。请用中文回答，输出精简且结构清晰。{prompt}"
 
         response = client.chat.completions.create(
             model=LOCAL_CONFIG["model_name"],
             messages=[{"role": "user", "content": prompt}]
         )
         full_text = response.choices[0].message.content
-        return full_text.strip() if full_text else lang.get("ai_empty_response", "AI生成内容为空，请重试~")
+        return full_text.strip() if full_text else (LANG_PACK[target_lang].get("ai_empty_response", "AI generated empty content, please try again") if target_lang else lang.get("ai_empty_response", "AI生成内容为空，请重试~"))
     except Exception as e:
         st.error(f"{lang['error']}: {str(e)}")
         return ""
@@ -992,9 +1089,9 @@ def read_file(uploaded_file):
         elif uploaded_file.name.lower().endswith(".txt"):
             return raw.decode("utf-8", errors="ignore").strip()
         else:
-            return "不支持的文件格式"
+            return "Unsupported file format"
     except Exception as e:
-        return f"文件读取失败：{str(e)}"
+        return f"File read failed: {str(e)}"
 
 def clean_markdown(text):
     """清理AI输出中的Markdown格式符号，保留纯文本内容"""
@@ -1534,7 +1631,7 @@ def generate_ppt_file(content, title, footer, end_text):
         return buffer
 
     except Exception as e:
-        st.error(f"PPT生成失败: {str(e)}")
+        st.error(f"PPT generation failed: {str(e)}")
         # 兜底：生成最简PPT
         prs = Presentation()
         slide = prs.slides.add_slide(prs.slide_layouts[0])
@@ -1553,18 +1650,34 @@ def extract_pdf_text(pdf_file):
             page_text = page.extract_text()
             if page_text:
                 text += page_text + "\n\n"
-        return text.strip() if text else "PDF文本提取为空"
+        return text.strip() if text else "PDF text extraction returned empty"
     except Exception as e:
-        return f"PDF读取失败：{str(e)}"
+        return f"PDF read failed: {str(e)}"
 
 # ==============================================================================
 # 📌 功能1：全网报告搜索（增强：数据来源可信度评分）
 # ==============================================================================
 def render_search():
-    kw = st.text_input(lang["search_input_tip"])
-    if st.button(lang["search_btn"], use_container_width=True):
-        if kw:
-            with st.spinner(lang["search_loading"]):
+    nl = LANG_PACK[st.session_state.language]
+    page_header("🔍", "menu_search_label", "menu_search_sub")
+    # 大搜索框
+    col_search, col_btn = st.columns([5, 1])
+    with col_search:
+        kw = st.text_input(
+            nl["search_input_tip"],
+            key="search_keyword",
+            placeholder=nl["search_input_tip"],
+            label_visibility="collapsed"
+        )
+    with col_btn:
+        search_clicked = st.button(nl["search_btn"], use_container_width=True, key="search_btn_main")
+
+    if search_clicked:
+        if not kw.strip():
+            st.warning(f"{nl['warning']}: {nl['search_kw_empty']}")
+        else:
+            with st.spinner(f"⏳ {nl['search_loading']}"):
+                st.info(nl.get("search_info_waiting", "AI is searching authoritative data sources, this may take 15-30 seconds..."))
                 prompt = PROMPT_CONFIG["report_search"].format(
                     keyword=kw,
                     compliance_rule=PROMPT_CONFIG["compliance_rule"],
@@ -1573,78 +1686,135 @@ def render_search():
                 content = ai_request(prompt, target_lang=st.session_state.language)
                 if content:
                     lines = content.strip().split("\n")
+                    result_count = 0
                     for i, line in enumerate(lines):
                         if "|" in line:
-                            p = line.split("|")
-                            if len(p) >= 4:
-                                title = p[0].strip()
-                                org = p[1].strip()
-                                year = p[2].strip()
-                                credibility = p[3].strip() if len(p) >= 5 else ""
-                                abstract = p[3].strip() if len(p) == 4 else (p[4].strip() if len(p) >= 5 else "")
+                            parts = line.split("|")
+                            if len(parts) >= 4:
+                                title = parts[0].strip()
+                                org = parts[1].strip()
+                                year = parts[2].strip()
+                                credibility = parts[3].strip() if len(parts) >= 5 else ""
+                                abstract = parts[3].strip() if len(parts) == 4 else (parts[4].strip() if len(parts) >= 5 else "")
 
-                                # 构造真实搜索链接
                                 search_query = f"{title} {org} {year} 报告 PDF"
                                 google_url = f"https://www.google.com/search?q={search_query.replace(' ', '+')}"
                                 baidu_url = f"https://www.baidu.com/s?wd={search_query.replace(' ', '%20')}"
 
-                                st.markdown(f"### {i+1}. {title}")
-                                st.write(f"{lang['search_pub_org']}{org} | {lang['search_pub_year']}{year}")
-
-                                # 展示可信度评分
+                                # 可信度评分标签
+                                credibility_html = ""
                                 if credibility:
                                     try:
                                         score_val = float(credibility)
                                         if score_val >= 8:
-                                            score_color = "green"
-                                            score_label = "高可信度"
+                                            badge_class = "xb-badge xb-badge-high"
+                                            score_label = "高可信度" if st.session_state.language == "zh" else "High"
                                         elif score_val >= 5:
-                                            score_color = "orange"
-                                            score_label = "中等可信度"
+                                            badge_class = "xb-badge xb-badge-mid"
+                                            score_label = "中等可信度" if st.session_state.language == "zh" else "Medium"
                                         else:
-                                            score_color = "red"
-                                            score_label = "低可信度"
-                                        st.markdown(
-                                            f"{lang['search_credibility']} "
-                                            f":{score_color}[**{credibility}/10** — {score_label}]"
-                                        )
+                                            badge_class = "xb-badge xb-badge-low"
+                                            score_label = "低可信度" if st.session_state.language == "zh" else "Low"
+                                        credibility_html = f'<span class="{badge_class}">{credibility}/10 {score_label}</span>'
                                     except ValueError:
-                                        st.markdown(f"{lang['search_credibility']}{credibility}")
+                                        credibility_html = f'<span class="xb-badge xb-badge-mid">{credibility}</span>'
 
-                                st.write(f"{lang['search_abstract']}{abstract}")
-                                st.markdown(f"🔗 [Google搜索]({google_url})  |  [百度搜索]({baidu_url})")
-                                st.divider()
-        else:
-            st.warning(f"{lang['warning']}: {lang['search_kw_empty']}")
+                                # 清理摘要重复前缀
+                                clean_abstract = abstract
+                                for prefix in ["核心摘要：", "核心摘要:", "Core Summary:", "Core Summary："]:
+                                    if clean_abstract.startswith(prefix):
+                                        clean_abstract = clean_abstract[len(prefix):].strip()
+                                        break
+                                # 截断过长摘要
+                                if len(clean_abstract) > 180:
+                                    clean_abstract = clean_abstract[:180] + "..."
+
+                                # 渲染卡片
+                                pub_label = nl["search_pub_org"].rstrip("：").rstrip(":")
+                                year_label = nl["search_pub_year"].rstrip("：").rstrip(":")
+                                st.markdown(f"""
+                                <div class="xb-result-card">
+                                    <div style="display:flex;align-items:flex-start;gap:0.5rem;">
+                                        <span class="xb-result-rank">{i+1}</span>
+                                        <div style="flex:1;">
+                                            <div class="xb-result-title">{title}</div>
+                                            <div class="xb-result-meta">
+                                                <span>🏢 {pub_label}: {org}</span>
+                                                <span>📅 {year_label}: {year}</span>
+                                                {credibility_html}
+                                            </div>
+                                            <div style="color:#64748b;font-size:0.85rem;line-height:1.5;margin-top:0.4rem;">
+                                                {clean_abstract}
+                                            </div>
+                                            <div style="margin-top:0.75rem;">
+                                                <a href="{google_url}" target="_blank" style="text-decoration:none;color:#1a56db;font-weight:600;font-size:0.85rem;margin-right:1.5rem;">🔗 Google</a>
+                                                <a href="{baidu_url}" target="_blank" style="text-decoration:none;color:#1a56db;font-weight:600;font-size:0.85rem;">🔗 百度</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                """, unsafe_allow_html=True)
+                                result_count += 1
+
+                    if result_count == 0:
+                        st.markdown(f"""
+                        <div class="xb-empty-state">
+                            <div class="xb-empty-state-icon">🔍</div>
+                            <div class="xb-empty-state-text">nl.get('search_empty_result', 'No matching reports found.')</div>
+                        </div>
+                        """, unsafe_allow_html=True)
+                else:
+                    st.markdown(f"""
+                    <div class="xb-empty-state">
+                        <div class="xb-empty-state-icon">🤔</div>
+                        <div class="xb-empty-state-text">nl.get('search_ai_unavailable', 'AI is temporarily unavailable.')</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+    elif not kw.strip():
+        # 空状态展示
+        st.markdown(f"""
+        <div class="xb-empty-state">
+            <div class="xb-empty-state-icon">🔎</div>
+            <div class="xb-empty-state-text">nl['search_idle_hint']</div>
+        </div>
+        """, unsafe_allow_html=True)
 
 # ==============================================================================
 # 📌 功能2：文档总结/数据提取（保持原样）
 # ==============================================================================
 def render_summary():
+    nl = LANG_PACK[st.session_state.language]
+    page_header("💡", "menu_summary_label", "menu_summary_sub")
     summary_mode = st.radio(
-        lang["summary_mode"],
-        options=[lang["summary_mode_general"], lang["summary_mode_indicator"]],
+        nl["summary_mode"],
+        options=[nl["summary_mode_general"], nl["summary_mode_indicator"]],
         horizontal=True
     )
-    st.markdown("---")
-    f = st.file_uploader(lang["summary_upload_tip"], type=["txt","docx"])
-    if f and st.button(lang["summary_analyze_btn"], use_container_width=True):
-        with st.spinner(lang["summary_analyze_loading"].format(mode=summary_mode)):
+    f = st.file_uploader(nl["summary_upload_tip"], type=["txt","docx"])
+    if not f:
+        st.markdown(f"""
+        <div class="xb-empty-state">
+            <div class="xb-empty-state-icon">📄</div>
+            <div class="xb-empty-state-text">nl.get('summary_idle_hint', 'Upload documents for AI analysis')</div>
+        </div>
+        """, unsafe_allow_html=True)
+        return
+    if st.button(nl["summary_analyze_btn"], use_container_width=True):
+        with st.spinner(nl["summary_analyze_loading"].format(mode=summary_mode)):
             txt = read_file(f)
-            st.text_area(lang["summary_original_preview"], txt, height=200)
-            st.markdown("---")
-            if summary_mode == lang["summary_mode_general"]:
+            st.text_area(nl["summary_original_preview"], txt, height=200)
+            if summary_mode == nl["summary_mode_general"]:
                 prompt = PROMPT_CONFIG["doc_summary_general"].format(text=txt[:3500], compliance_rule=PROMPT_CONFIG["compliance_rule"], formatting_requirement=PROMPT_CONFIG["formatting_requirement"])
             else:
                 prompt = PROMPT_CONFIG["doc_summary_indicator"].format(text=txt[:6000], compliance_rule=PROMPT_CONFIG["compliance_rule"])
             res = ai_request(prompt, target_lang=st.session_state.language)
-            st.markdown(f"### {lang['summary_result_title'].format(mode=summary_mode)}")
+            st.markdown(f"### {nl['summary_result_title'].format(mode=summary_mode)}")
             st.write(res)
             word_buf = generate_word_file(res)
             st.download_button(
-                label=lang["summary_download_btn"],
+                label=nl["summary_download_btn"],
                 data=word_buf,
-                file_name=lang["summary_download_filename"].format(mode=summary_mode),
+                file_name=nl["summary_download_filename"].format(mode=summary_mode),
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 use_container_width=True
             )
@@ -1653,30 +1823,30 @@ def render_summary():
 # 📌 功能3：行业报告生成（增强：ESG赛道 + 合规风险模块）
 # ==============================================================================
 def render_generate():
+    nl = LANG_PACK[st.session_state.language]
+    page_header("📝", "menu_generate_label", "menu_generate_sub")
     col1, col2 = st.columns(2)
     with col1:
-        selected_track = st.selectbox(lang["generate_track_select"], options=INDUSTRY_TRACKS)
+        selected_track = st.selectbox(nl["generate_track_select"], options=INDUSTRY_TRACKS)
     with col2:
-        industry_name = st.text_input(lang["generate_name_input"])
+        industry_name = st.text_input(nl["generate_name_input"])
     st.markdown("---")
-    st.markdown(lang["generate_ref_tip"])
-    reference_file = st.file_uploader(lang["generate_ref_upload"], type=["txt","docx"], key="reference_file")
+    st.markdown(nl["generate_ref_tip"])
+    reference_file = st.file_uploader(nl["generate_ref_upload"], type=["txt","docx"], key="reference_file")
     reference_text = ""
     if reference_file:
         reference_text = read_file(reference_file)
-        with st.expander(lang["generate_ref_preview"]):
+        with st.expander(nl["generate_ref_preview"]):
             st.text_area("参考资料", reference_text, height=200)
-
-    # 新增：法律合规风险分析复选框
     st.markdown("---")
-    add_compliance = st.checkbox(lang["generate_compliance_checkbox"], value=False)
-
+    add_compliance = st.checkbox(nl["generate_compliance_checkbox"], value=False)
     st.markdown("---")
-    if st.button(lang["generate_btn"], use_container_width=True):
+    if st.button(nl["generate_btn"], use_container_width=True):
         if not industry_name:
-            st.warning(f"{lang['warning']}: {lang['generate_name_empty']}")
+            st.warning(f"{nl['warning']}: {nl['generate_name_empty']}")
         else:
-            with st.spinner(lang["generate_loading"].format(track=selected_track)):
+            with st.spinner(nl["generate_loading"].format(track=selected_track)):
+                st.info(nl.get("generate_info_waiting", "AI is generating a professional industry report, this may take 30-60 seconds..."))
                 base_prompt = TRACK_PROMPT_MAP[selected_track]
                 full_prompt = base_prompt.format(
                     name=industry_name,
@@ -1684,35 +1854,33 @@ def render_generate():
                     formatting_requirement=PROMPT_CONFIG["formatting_requirement"]
                 )
                 if reference_text:
-                    full_prompt += f"\n\n{lang['generate_ref_rule']}\n{reference_text[:3000]}"
-                # 附加合规风险模块
+                    full_prompt += f"\n\n{nl['generate_ref_rule']}\n{reference_text[:3000]}"
                 if add_compliance:
                     full_prompt += PROMPT_CONFIG["compliance_risk_module"]
-
                 report_content = ai_request(full_prompt, target_lang=st.session_state.language)
-                st.markdown(f"### {lang['generate_report_title'].format(name=industry_name, track=selected_track)}")
+                st.markdown(f"### {nl['generate_report_title'].format(name=industry_name, track=selected_track)}")
                 st.write(report_content)
                 col_word, col_ppt = st.columns(2)
                 with col_word:
                     word_buf = generate_word_file(report_content)
                     st.download_button(
-                        label=lang["generate_download_word"],
+                        label=nl["generate_download_word"],
                         data=word_buf,
-                        file_name=lang["generate_word_filename"].format(name=industry_name, track=selected_track),
+                        file_name=nl["generate_word_filename"].format(name=industry_name, track=selected_track),
                         mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                         use_container_width=True
                     )
                 with col_ppt:
                     ppt_buf = generate_ppt_file(
                         content=report_content,
-                        title=f"{industry_name} {lang['ppt_title_default']}",
-                        footer=lang["ppt_footer"],
-                        end_text=lang["ppt_end_page"]
+                        title=f"{industry_name} {nl['ppt_title_default']}",
+                        footer=nl["ppt_footer"],
+                        end_text=nl["ppt_end_page"]
                     )
                     st.download_button(
-                        label=lang["generate_download_ppt"],
+                        label=nl["generate_download_ppt"],
                         data=ppt_buf,
-                        file_name=lang["generate_ppt_filename"].format(name=industry_name, track=selected_track),
+                        file_name=nl["generate_ppt_filename"].format(name=industry_name, track=selected_track),
                         mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
                         use_container_width=True
                     )
@@ -1721,28 +1889,34 @@ def render_generate():
 # 📌 功能4：多文档竞品对比分析（增强：战略优先级矩阵）
 # ==============================================================================
 def render_compare():
-    st.markdown(lang["compare_tip"])
-
-    # 新增：优先级矩阵开关
-    include_priority = st.checkbox(lang["compare_priority_label"], value=True)
-
+    nl = LANG_PACK[st.session_state.language]
+    page_header("📈", "menu_compare_label", "menu_compare_sub")
+    st.markdown(nl["compare_tip"])
+    include_priority = st.checkbox(nl["compare_priority_label"], value=True)
     upload_files = st.file_uploader(
-        lang["compare_upload_tip"],
+        nl["compare_upload_tip"],
         type=["txt","docx"],
         accept_multiple_files=True
     )
+    if not upload_files:
+        st.markdown(f"""
+        <div class="xb-empty-state">
+            <div class="xb-empty-state-icon">📑</div>
+            <div class="xb-empty-state-text">nl.get('compare_idle_hint', 'Upload 2+ documents for AI comparison')</div>
+        </div>
+        """, unsafe_allow_html=True)
+        return
     st.markdown("---")
-    if st.button(lang["compare_btn"], use_container_width=True):
+    if st.button(nl["compare_btn"], use_container_width=True):
         if not upload_files or len(upload_files) < 2:
-            st.warning(f"{lang['warning']}: {lang['compare_file_min']}")
+            st.warning(f"{nl['warning']}: {nl['compare_file_min']}")
         else:
-            with st.spinner(lang["compare_loading"]):
+            with st.spinner(nl["compare_loading"]):
                 all_doc_text = ""
                 for i, file in enumerate(upload_files):
                     file_text = read_file(file)
                     all_doc_text += f"===== 文档{i+1}：{file.name} =====\n{file_text[:3000]}\n\n"
 
-                # 根据开关决定是否附加优先级矩阵指令
                 priority_instruction = PROMPT_CONFIG["priority_matrix_instruction"] if include_priority else ""
 
                 prompt = PROMPT_CONFIG["multi_doc_compare"].format(
@@ -1755,29 +1929,29 @@ def render_compare():
                 st.session_state.compare_result = compare_result
 
     if st.session_state.compare_result:
-        st.markdown(f"### {lang['compare_result_title']}")
+        st.markdown(f"### {nl['compare_result_title']}")
         st.write(st.session_state.compare_result)
         col_word, col_ppt = st.columns(2)
         with col_word:
             word_buf = generate_word_file(st.session_state.compare_result)
             st.download_button(
-                label=lang["compare_download_word"],
+                label=nl["compare_download_word"],
                 data=word_buf,
-                file_name=lang["compare_word_filename"],
+                file_name=nl["compare_word_filename"],
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 use_container_width=True
             )
         with col_ppt:
             ppt_buf = generate_ppt_file(
                 content=st.session_state.compare_result,
-                title=lang["compare_result_title"],
-                footer=lang["ppt_footer"],
-                end_text=lang["ppt_end_page"]
+                title=nl["compare_result_title"],
+                footer=nl["ppt_footer"],
+                end_text=nl["ppt_end_page"]
             )
             st.download_button(
-                label=lang["compare_download_ppt"],
+                label=nl["compare_download_ppt"],
                 data=ppt_buf,
-                file_name=lang["compare_ppt_filename"],
+                file_name=nl["compare_ppt_filename"],
                 mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
                 use_container_width=True
             )
@@ -1786,31 +1960,41 @@ def render_compare():
 # 📌 功能5：仿照模板改写文档（保持原样）
 # ==============================================================================
 def render_rewrite():
-    st.markdown(lang["rewrite_flow"])
+    nl = LANG_PACK[st.session_state.language]
+    page_header("✏️", "menu_rewrite_label", "menu_rewrite_sub")
+    st.markdown(nl["rewrite_flow"])
     col1, col2 = st.columns(2)
     template_text = ""
     content_text = ""
     with col1:
-        template_file = st.file_uploader(lang["rewrite_template_upload"], type=["txt","docx"], key="template_file")
+        template_file = st.file_uploader(nl["rewrite_template_upload"], type=["txt","docx"], key="template_file")
         if template_file:
             template_text = read_file(template_file)
-            with st.expander(lang["rewrite_template_preview"]):
+            with st.expander(nl["rewrite_template_preview"]):
                 st.text_area("Template", template_text, height=280, key="template_preview")
     with col2:
-        content_file = st.file_uploader(lang["rewrite_content_upload"], type=["txt","docx"], key="content_file")
+        content_file = st.file_uploader(nl["rewrite_content_upload"], type=["txt","docx"], key="content_file")
         if content_file:
             content_text = read_file(content_file)
-            with st.expander(lang["rewrite_content_preview"]):
+            with st.expander(nl["rewrite_content_preview"]):
                 st.text_area("Original", content_text, height=280, key="content_preview")
+    if not template_file and not content_file:
+        st.markdown(f"""
+        <div class="xb-empty-state">
+            <div class="xb-empty-state-icon">📋</div>
+            <div class="xb-empty-state-text">nl.get('rewrite_idle_hint', 'Upload template and source documents')</div>
+        </div>
+        """, unsafe_allow_html=True)
+        return
     st.markdown("---")
-    if st.button(lang["rewrite_btn"], use_container_width=True, disabled=st.session_state.rewrite_generating):
+    if st.button(nl["rewrite_btn"], use_container_width=True, disabled=st.session_state.rewrite_generating):
         if not template_file or not content_file:
-            st.warning(f"{lang['warning']}: {lang['rewrite_file_empty']}")
+            st.warning(f"{nl['warning']}: {nl['rewrite_file_empty']}")
         else:
             st.session_state.rewrite_result = ""
             st.session_state.rewrite_generating = True
     if st.session_state.rewrite_generating and not st.session_state.rewrite_result:
-        with st.spinner(lang["rewrite_loading"]):
+        with st.spinner(nl["rewrite_loading"]):
             prompt = PROMPT_CONFIG["template_rewrite"].format(
                 template_content=template_text[:4000],
                 original_content=content_text[:5000],
@@ -1820,29 +2004,29 @@ def render_rewrite():
             st.session_state.rewrite_result = result_text
             st.session_state.rewrite_generating = False
     if st.session_state.rewrite_result and not st.session_state.rewrite_generating:
-        st.markdown(f"### {lang['rewrite_result_title']}")
+        st.markdown(f"### {nl['rewrite_result_title']}")
         st.text_area("Result", st.session_state.rewrite_result, height=450, key="rewrite_result_preview")
         col_word, col_ppt = st.columns(2)
         with col_word:
             word_buf = generate_word_file(st.session_state.rewrite_result)
             st.download_button(
-                label=lang["rewrite_download_word"],
+                label=nl["rewrite_download_word"],
                 data=word_buf,
-                file_name=lang["rewrite_word_filename"],
+                file_name=nl["rewrite_word_filename"],
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 use_container_width=True
             )
         with col_ppt:
             ppt_buf = generate_ppt_file(
                 content=st.session_state.rewrite_result,
-                title=lang["rewrite_result_title"],
-                footer=lang["ppt_footer"],
-                end_text=lang["ppt_end_page"]
+                title=nl["rewrite_result_title"],
+                footer=nl["ppt_footer"],
+                end_text=nl["ppt_end_page"]
             )
             st.download_button(
-                label=lang["rewrite_download_ppt"],
+                label=nl["rewrite_download_ppt"],
                 data=ppt_buf,
-                file_name=lang["rewrite_ppt_filename"],
+                file_name=nl["rewrite_ppt_filename"],
                 mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
                 use_container_width=True
             )
@@ -1851,51 +2035,53 @@ def render_rewrite():
 # 📌 功能6：商务文档翻译（保持原样）
 # ==============================================================================
 def render_translate():
-    st.markdown(lang["translate_tip"])
+    nl = LANG_PACK[st.session_state.language]
+    page_header("🌐", "menu_translate_label", "menu_translate_sub")
+    st.markdown(nl["translate_tip"])
     col1, col2 = st.columns(2)
     with col1:
         target_lang = st.selectbox(
-            lang["translate_target_lang"],
+            nl["translate_target_lang"],
             options=TARGET_LANG_OPTIONS[current_lang],
             index=1
         )
     with col2:
         translate_mode = st.radio(
-            lang["translate_mode"],
-            options=[lang["translate_mode_text"], lang["translate_mode_file"]],
+            nl["translate_mode"],
+            options=[nl["translate_mode_text"], nl["translate_mode_file"]],
             horizontal=True
         )
     st.markdown("---")
     source_text = ""
-    if translate_mode == lang["translate_mode_text"]:
-        source_text = st.text_area(lang["translate_textarea_tip"], height=200)
+    if translate_mode == nl["translate_mode_text"]:
+        source_text = st.text_area(nl["translate_textarea_tip"], height=200)
     else:
-        translate_file = st.file_uploader(lang["translate_upload_tip"], type=["txt","docx"])
+        translate_file = st.file_uploader(nl["translate_upload_tip"], type=["txt","docx"])
         if translate_file:
             source_text = read_file(translate_file)
-            with st.expander(lang["translate_original_preview"]):
+            with st.expander(nl["translate_original_preview"]):
                 st.text_area("Original", source_text, height=250)
     st.markdown("---")
-    if st.button(lang["translate_btn"], use_container_width=True, disabled=st.session_state.translate_generating):
+    if st.button(nl["translate_btn"], use_container_width=True, disabled=st.session_state.translate_generating):
         if not source_text.strip():
-            st.warning(f"{lang['warning']}: {lang['translate_content_empty']}")
+            st.warning(f"{nl['warning']}: {nl['translate_content_empty']}")
         else:
             st.session_state.translate_result = ""
             st.session_state.translate_generating = True
     if st.session_state.translate_generating and not st.session_state.translate_result:
-        with st.spinner(lang["translate_loading"]):
+        with st.spinner(nl["translate_loading"]):
             prompt = PROMPT_CONFIG["doc_translate"].format(target_lang=target_lang, text=source_text[:6000])
             result_text = ai_request(prompt, target_lang=st.session_state.language)
             st.session_state.translate_result = result_text
             st.session_state.translate_generating = False
     if st.session_state.translate_result and not st.session_state.translate_generating:
-        st.markdown(f"### {lang['translate_result_title']}")
+        st.markdown(f"### {nl['translate_result_title']}")
         st.text_area("Result", st.session_state.translate_result, height=400, key="translate_result_preview")
         word_buf = generate_word_file(st.session_state.translate_result)
         st.download_button(
-            label=lang["translate_download_btn"],
+            label=nl["translate_download_btn"],
             data=word_buf,
-            file_name=lang["translate_download_filename"],
+            file_name=nl["translate_download_filename"],
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             use_container_width=True
         )
@@ -1904,11 +2090,22 @@ def render_translate():
 # 📌 功能7：无损PDF转Word（纯本地转换，保持原样）
 # ==============================================================================
 def render_pdf2word():
-    st.markdown(lang["pdf2word_tip"])
-    pdf_file = st.file_uploader(lang["pdf2word_upload_tip"], type=["pdf"], key="pdf_file")
+    nl = LANG_PACK[st.session_state.language]
+    page_header("💾", "menu_pdf2word_label", "menu_pdf2word_sub")
+    st.markdown(nl["pdf2word_tip"])
+    pdf_file = st.file_uploader(nl["pdf2word_upload_tip"], type=["pdf"], key="pdf_file")
+
+    if not pdf_file:
+        st.markdown(f"""
+        <div class="xb-empty-state">
+            <div class="xb-empty-state-icon">📄</div>
+            <div class="xb-empty-state-text">nl.get('pdf2word_idle_hint', 'Upload a PDF for conversion')</div>
+        </div>
+        """, unsafe_allow_html=True)
+        return
 
     if pdf_file:
-        with st.spinner(lang["pdf2word_loading"]):
+        with st.spinner(nl["pdf2word_loading"]):
             raw_bytes = pdf_file.read()
             with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
                 f.write(raw_bytes)
@@ -1923,16 +2120,16 @@ def render_pdf2word():
                 with open(temp_docx, "rb") as f:
                     word_data = f.read()
 
-                st.success(lang["success"])
+                st.success(nl["success"])
                 st.download_button(
-                    label=lang["pdf2word_download_word"],
+                    label=nl["pdf2word_download_word"],
                     data=word_data,
-                    file_name=lang["pdf2word_word_filename"],
+                    file_name=nl["pdf2word_word_filename"],
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                     use_container_width=True
                 )
             except Exception as e:
-                st.error(f"{lang['error']}: PDF转换失败 - {str(e)}")
+                st.error(f"{nl['error']}: {nl.get('pdf_conversion_failed', 'PDF conversion failed')} - {str(e)}")
             finally:
                 try:
                     os.unlink(temp_pdf)
@@ -1944,55 +2141,53 @@ def render_pdf2word():
 # 🆕 新增功能8：关于本产品 — 产品方法论展示
 # ==============================================================================
 def render_about():
-    st.markdown(f"## {lang['about_title']}")
-    st.markdown(f"*{lang['about_subtitle']}*")
-    st.markdown("---")
-    st.markdown(lang["about_content"])
+    nl = LANG_PACK[st.session_state.language]
+    page_header("📖", "menu_about_label", "menu_about_sub")
+    st.markdown(nl["about_content"])
 
     # 展示技术指标
     st.markdown("---")
-    st.markdown("### 技术指标")
+    st.markdown(f"### {nl.get('about_tech_indicators', 'Technical Indicators')}")
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.metric(label="功能模块", value="11")
+        st.metric(label=nl.get("about_metric_modules", "功能模块"), value="11")
     with col2:
-        st.metric(label="行业赛道模板", value="6")
+        st.metric(label=nl.get("about_metric_templates", "行业赛道模板"), value="6")
     with col3:
-        st.metric(label="支持语言", value="5")
+        st.metric(label=nl.get("about_metric_languages", "支持语言"), value="5")
     with col4:
-        st.metric(label="输出格式", value="Word/PPT")
+        st.metric(label=nl.get("about_metric_formats", "输出格式"), value="Word/PPT")
 
 # ==============================================================================
 # 🆕 新增功能9：企业AI就绪度评估
 # ==============================================================================
 def render_assessment():
-    st.markdown(f"## {lang['assessment_title']}")
-    st.markdown(f"*{lang['assessment_subtitle']}*")
-    st.markdown("---")
+    nl = LANG_PACK[st.session_state.language]
+    page_header("🏢", "menu_assessment_label", "menu_assessment_sub")
 
     col1, col2 = st.columns(2)
     with col1:
-        company_name = st.text_input(lang["assessment_company"], key="assess_company")
+        company_name = st.text_input(nl["assessment_company"], key="assess_company")
         company_size = st.selectbox(
-            lang["assessment_size"],
-            options=lang["assessment_sizes"],
+            nl["assessment_size"],
+            options=nl["assessment_sizes"],
             key="assess_size"
         )
     with col2:
-        industry = st.text_input(lang["assessment_industry"], key="assess_industry")
+        industry = st.text_input(nl["assessment_industry"], key="assess_industry")
         ai_level = st.selectbox(
-            lang["assessment_existing_ai"],
-            options=lang["assessment_ai_levels"],
+            nl["assessment_existing_ai"],
+            options=nl["assessment_ai_levels"],
             key="assess_ai_level"
         )
-    revenue = st.text_input(lang["assessment_revenue"], key="assess_revenue", placeholder="如：5000")
+    revenue = st.text_input(nl["assessment_revenue"], key="assess_revenue", placeholder="如：5000")
 
     st.markdown("---")
-    if st.button(lang["assessment_btn"], use_container_width=True, key="assess_btn"):
+    if st.button(nl["assessment_btn"], use_container_width=True, key="assess_btn"):
         if not company_name.strip():
-            st.warning(f"{lang['warning']}: {lang['assessment_company_empty']}")
+            st.warning(f"{nl['warning']}: {nl['assessment_company_empty']}")
         else:
-            with st.spinner(lang["assessment_loading"]):
+            with st.spinner(nl["assessment_loading"]):
                 prompt = PROMPT_CONFIG["ai_readiness_assessment"].format(
                     company_name=company_name,
                     industry=industry or "未指定",
@@ -2006,31 +2201,29 @@ def render_assessment():
                 st.session_state.assessment_result = result
 
     if st.session_state.assessment_result:
-        st.markdown(f"### {lang['assessment_result_title']}")
+        st.markdown(f"### {nl['assessment_result_title']}")
         st.markdown(st.session_state.assessment_result)
-
-        # 下载按钮
         col_dl1, col_dl2 = st.columns(2)
         with col_dl1:
             word_buf = generate_word_file(st.session_state.assessment_result)
             st.download_button(
-                label="📍 下载Word版评估报告",
+                label=nl.get('assessment_download_word', '📍 Download Word Assessment Report'),
                 data=word_buf,
-                file_name=f"AI就绪度评估报告_{company_name or '企业'}.docx",
+                file_name=f"{nl.get('assessment_word_filename', 'AI_Readiness_Assessment')}_{company_name or 'enterprise'}.docx",
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
                 use_container_width=True
             )
         with col_dl2:
             ppt_buf = generate_ppt_file(
                 content=st.session_state.assessment_result,
-                title=f"AI就绪度评估 - {company_name or '企业'}",
-                footer=lang["ppt_footer"],
-                end_text=lang["ppt_end_page"]
+                title=f"{nl.get('assessment_ppt_title', 'AI Readiness Assessment')} - {company_name or nl.get('assessment_company_default', 'Enterprise')}",
+                footer=nl["ppt_footer"],
+                end_text=nl["ppt_end_page"]
             )
             st.download_button(
-                label="📊 下载PPT版",
+                label=nl.get('assessment_download_ppt', '📊 Download PPT Version'),
                 data=ppt_buf,
-                file_name=f"AI就绪度评估报告_{company_name or '企业'}.pptx",
+                file_name=f"{nl.get('assessment_ppt_filename', 'AI_Readiness_Assessment')}_{company_name or 'enterprise'}.pptx",
                 mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
                 use_container_width=True
             )
@@ -2039,25 +2232,24 @@ def render_assessment():
 # 🆕 新增功能10：AI合规与溯源 — 交互式
 # ==============================================================================
 def render_compliance():
-    st.markdown(f"## {lang['compliance_title']}")
-    st.markdown(f"*{lang['compliance_subtitle']}*")
-    st.markdown("---")
+    nl = LANG_PACK[st.session_state.language]
+    page_header("🛡️", "menu_compliance_label", "menu_compliance_sub")
 
     # ── 一、合规检查 ──
-    st.markdown(f"### {lang['compliance_check_title']}")
-    st.caption(lang["compliance_check_tip"])
+    st.markdown(f"### {nl['compliance_check_title']}")
+    st.caption(nl["compliance_check_tip"])
     check_input = st.text_area(
         label="compliance_check_area",
-        placeholder=lang["compliance_check_placeholder"],
+        placeholder=nl["compliance_check_placeholder"],
         height=200,
         key="compliance_check_input",
         label_visibility="collapsed"
     )
-    if st.button(lang["compliance_check_btn"], use_container_width=True, key="compliance_check_btn"):
+    if st.button(nl["compliance_check_btn"], use_container_width=True, key="compliance_check_btn"):
         if not check_input.strip():
-            st.warning(lang["translate_content_empty"])
+            st.warning(nl["translate_content_empty"])
         else:
-            with st.spinner(lang["compliance_check_loading"]):
+            with st.spinner(nl["compliance_check_loading"]):
                 prompt = PROMPT_CONFIG["compliance_check"].format(
                     text_to_check=check_input.strip(),
                     formatting_requirement=PROMPT_CONFIG["formatting_requirement"]
@@ -2066,25 +2258,25 @@ def render_compliance():
                 st.session_state.compliance_check_result = result
 
     if st.session_state.get("compliance_check_result"):
-        st.markdown(f"#### {lang['compliance_check_result_title']}")
+        st.markdown(f"#### {nl['compliance_check_result_title']}")
         st.markdown(st.session_state.compliance_check_result)
         st.markdown("")
 
     st.markdown("---")
 
     # ── 二、溯源报告生成 ──
-    st.markdown(f"### {lang['compliance_trace_title_new']}")
-    st.caption(lang["compliance_trace_tip"])
+    st.markdown(f"### {nl['compliance_trace_title_new']}")
+    st.caption(nl["compliance_trace_tip"])
     trace_input = st.text_input(
         label="compliance_trace_input",
-        placeholder=lang["compliance_trace_placeholder"],
+        placeholder=nl["compliance_trace_placeholder"],
         key="compliance_trace_topic"
     )
-    if st.button(lang["compliance_trace_btn"], use_container_width=True, key="compliance_trace_btn"):
+    if st.button(nl["compliance_trace_btn"], use_container_width=True, key="compliance_trace_btn"):
         if not trace_input.strip():
-            st.warning(lang["translate_content_empty"])
+            st.warning(nl["translate_content_empty"])
         else:
-            with st.spinner(lang["compliance_trace_loading"]):
+            with st.spinner(nl["compliance_trace_loading"]):
                 prompt = PROMPT_CONFIG["traceability_report"].format(
                     report_topic=trace_input.strip(),
                     compliance_rule=PROMPT_CONFIG["compliance_rule"],
@@ -2094,13 +2286,13 @@ def render_compliance():
                 st.session_state.compliance_trace_result = result
 
     if st.session_state.get("compliance_trace_result"):
-        st.markdown(f"#### {lang['compliance_trace_result_title']}")
+        st.markdown(f"#### {nl['compliance_trace_result_title']}")
         st.markdown(st.session_state.compliance_trace_result)
         col_dl1, col_dl2 = st.columns(2)
         with col_dl1:
             word_buf = generate_word_file(st.session_state.compliance_trace_result)
             st.download_button(
-                label=lang["compliance_download_word"],
+                label=nl["compliance_download_word"],
                 data=word_buf,
                 file_name="Traceability_Report.docx",
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -2110,11 +2302,11 @@ def render_compliance():
             ppt_buf = generate_ppt_file(
                 content=st.session_state.compliance_trace_result,
                 title="Traceability Report",
-                footer=lang["ppt_footer"],
-                end_text=lang["ppt_end_page"]
+                footer=nl["ppt_footer"],
+                end_text=nl["ppt_end_page"]
             )
             st.download_button(
-                label=lang["compliance_download_ppt"],
+                label=nl["compliance_download_ppt"],
                 data=ppt_buf,
                 file_name="Traceability_Report.pptx",
                 mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
@@ -2124,61 +2316,60 @@ def render_compliance():
     st.markdown("---")
 
     # ── 三、合规机制参考（静态展示）──
-    st.markdown(f"### {lang['compliance_static_title']}")
+    st.markdown(f"### {nl['compliance_static_title']}")
     st.markdown("")
 
     # 可信度评分体系
-    st.markdown(f"#### {lang['compliance_score_title']}")
-    st.markdown(lang["compliance_score_desc"])
+    st.markdown(f"#### {nl['compliance_score_title']}")
+    st.markdown(nl["compliance_score_desc"])
     score_data = [
-        (lang["compliance_source_gov"], "9-10/10", "🟢", "国家统计局、央行、证监会、国务院部门"),
-        (lang["compliance_source_listed"], "8-9/10", "🟢", "上市公司年报、招股说明书、官方公告"),
-        (lang["compliance_source_consulting"], "7-8/10", "🟡", "麦肯锡、BCG、贝恩、IDC、Gartner、四大"),
-        (lang["compliance_source_media"], "4-6/10", "🟠", "财经媒体、科技媒体、行业自媒体"),
-        (lang["compliance_source_unknown"], "1-3/10", "🔴", "未标注来源的数据/信息"),
+        (nl["compliance_source_gov"], "9-10/10", "🟢", nl["compliance_source_example_gov"]),
+        (nl["compliance_source_listed"], "8-9/10", "🟢", nl["compliance_source_example_listed"]),
+        (nl["compliance_source_consulting"], "7-8/10", "🟡", nl["compliance_source_example_consulting"]),
+        (nl["compliance_source_media"], "4-6/10", "🟠", nl["compliance_source_example_media"]),
+        (nl["compliance_source_unknown"], "1-3/10", "🔴", nl["compliance_source_example_unknown"]),
     ]
-    table_md = f"| {lang['compliance_source_levels']} | 评分 | 等级 | 典型来源 |\n|------|------|------|------|\n"
+    table_md = f"| {nl['compliance_source_levels']} | {nl.get('compliance_col_score', '评分')} | {nl.get('compliance_col_level', '等级')} | {nl.get('compliance_col_source', '典型来源')} |\n|------|------|------|------|\n"
     for row in score_data:
         table_md += f"| {row[0]} | {row[1]} | {row[2]} | {row[3]} |\n"
     st.markdown(table_md)
     st.markdown("")
 
     # 溯源链路
-    st.markdown(f"#### {lang['compliance_trace_title']}")
-    st.markdown(lang["compliance_trace_desc"])
-    st.info(lang["compliance_trace_flow"])
+    st.markdown(f"#### {nl['compliance_trace_title']}")
+    st.markdown(nl["compliance_trace_desc"])
+    st.info(nl["compliance_trace_flow"])
     st.markdown("")
 
     # 合规检查开关
-    st.markdown(f"#### {lang['compliance_switch_title']}")
-    st.markdown(lang["compliance_switch_desc"])
-    for item in lang["compliance_switch_items"]:
+    st.markdown(f"#### {nl['compliance_switch_title']}")
+    st.markdown(nl["compliance_switch_desc"])
+    for item in nl["compliance_switch_items"]:
         st.checkbox(item, value=True, disabled=True, key=f"static_switch_{item[:10]}")
-    st.caption("*以上开关在实际使用中可在生成报告前自由切换，当前为默认开启状态。")
+    st.caption(nl.get("compliance_switch_caption", "*These toggles can be freely switched before report generation; currently default ON."))
 
 # ==============================================================================
 # 🆕 新增功能11：战略决策仪表盘 — 交互式艾森豪威尔矩阵
 # ==============================================================================
 def render_dashboard():
-    st.markdown(f"## {lang['dashboard_title']}")
-    st.markdown(f"*{lang['dashboard_subtitle']}*")
-    st.markdown("---")
-    st.info(lang["dashboard_intro"])
+    nl = LANG_PACK[st.session_state.language]
+    page_header("📊", "menu_dashboard_label", "menu_dashboard_sub")
+    st.info(nl["dashboard_intro"])
     st.markdown("")
 
     # 用户输入项目清单
     projects_input = st.text_area(
-        lang["dashboard_projects_tip"],
-        placeholder=lang["dashboard_projects_placeholder"],
+        nl["dashboard_projects_tip"],
+        placeholder=nl["dashboard_projects_placeholder"],
         height=180,
         key="dashboard_projects"
     )
 
-    if st.button(lang["dashboard_btn"], use_container_width=True, key="dashboard_gen_btn"):
+    if st.button(nl["dashboard_btn"], use_container_width=True, key="dashboard_gen_btn"):
         if not projects_input.strip():
-            st.warning(lang["assessment_company_empty"])
+            st.warning(nl["assessment_company_empty"])
         else:
-            with st.spinner(lang["dashboard_loading"]):
+            with st.spinner(nl["dashboard_loading"]):
                 prompt = PROMPT_CONFIG["eisenhower_matrix"].format(
                     projects_input=projects_input.strip(),
                     formatting_requirement=PROMPT_CONFIG["formatting_requirement"]
@@ -2187,14 +2378,14 @@ def render_dashboard():
                 st.session_state.dashboard_result = result
 
     if st.session_state.dashboard_result:
-        st.markdown(f"### {lang['dashboard_result_title']}")
+        st.markdown(f"### {nl['dashboard_result_title']}")
         st.markdown(st.session_state.dashboard_result)
 
         col_dl1, col_dl2 = st.columns(2)
         with col_dl1:
             word_buf = generate_word_file(st.session_state.dashboard_result)
             st.download_button(
-                label=lang["dashboard_download_word"],
+                label=nl["dashboard_download_word"],
                 data=word_buf,
                 file_name="Strategic_Decision_Matrix.docx",
                 mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -2204,11 +2395,11 @@ def render_dashboard():
             ppt_buf = generate_ppt_file(
                 content=st.session_state.dashboard_result,
                 title="Strategic Decision Matrix",
-                footer=lang["ppt_footer"],
-                end_text=lang["ppt_end_page"]
+                footer=nl["ppt_footer"],
+                end_text=nl["ppt_end_page"]
             )
             st.download_button(
-                label=lang["dashboard_download_ppt"],
+                label=nl["dashboard_download_ppt"],
                 data=ppt_buf,
                 file_name="Strategic_Decision_Matrix.pptx",
                 mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
@@ -2242,23 +2433,580 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# 豆包品牌化CSS主题 — 主色#6C5CE7(紫) + 辅色#FF6B6B(珊瑚红) + #00D2FF(青蓝) + 背景#F7F8FC + 文字#1E1E2E
 st.markdown("""
 <style>
+/* ═══════════════════════════════════════════
+   GLOBAL RESET & FOUNDATIONS
+   ═══════════════════════════════════════════ */
 #MainMenu {visibility: hidden !important;}
 footer {visibility: hidden !important;}
 button[title="View fullscreen"] {visibility: hidden !important;}
 .stDeployButton {display: none !important;}
-::-webkit-scrollbar {display: none !important;}
-header {height: 0 !important;background: transparent !important;border: none !important;}
-button[aria-label="Open sidebar"] {position: fixed !important;top: 1rem !important;left: 1rem !important;z-index: 9999 !important;background-color: rgba(255,255,255,0.9) !important;border-radius: 50% !important;width: 2.5rem !important;height: 2.5rem !important;box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;}
+header {height: 0 !important; background: transparent !important; border: none !important;}
+
+html, body, [class*="css"] {
+    font-family: "Microsoft YaHei", "微软雅黑", "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
+    color: #1E1E2E !important;
+}
+
+/* Main app background */
+.stApp {
+    background-color: #F7F8FC !important;
+}
+.main .block-container {
+    background-color: #F7F8FC !important;
+}
+
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY
+   ═══════════════════════════════════════════ */
+h1 {
+    color: #1E1E2E !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px !important;
+}
+h2 {
+    color: #2D2D3F !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+}
+h3 {
+    color: #3D3D52 !important;
+    font-weight: 600 !important;
+}
+h4 {
+    color: #4A4A63 !important;
+    font-weight: 600 !important;
+}
+
+/* ═══════════════════════════════════════════
+   BUTTONS — 渐变紫色圆角按钮 + hover动画
+   ═══════════════════════════════════════════ */
+.stButton > button {
+    background: linear-gradient(135deg, #6C5CE7 0%, #5A4BD1 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 0.6rem 2rem !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.3px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 16px rgba(108, 92, 231, 0.25) !important;
+}
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 28px rgba(108, 92, 231, 0.4) !important;
+    background: linear-gradient(135deg, #7B6EF0 0%, #6C5CE7 100%) !important;
+}
+.stButton > button:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.3) !important;
+}
+
+/* 下载按钮 — 珊瑚红 */
+.stDownloadButton > button {
+    background: linear-gradient(135deg, #FF6B6B 0%, #E85D5D 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 0.6rem 2rem !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.3px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 16px rgba(255, 107, 107, 0.3) !important;
+}
+.stDownloadButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 28px rgba(255, 107, 107, 0.45) !important;
+    background: linear-gradient(135deg, #FF7E7E 0%, #FF6B6B 100%) !important;
+}
+
+/* ═══════════════════════════════════════════
+   INPUT FIELDS — 圆角边框 + focus紫色光晕
+   ═══════════════════════════════════════════ */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    border-radius: 16px !important;
+    border: 2px solid #E8E8F0 !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.95rem !important;
+    background: #ffffff !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.04) !important;
+}
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #6C5CE7 !important;
+    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.12), 0 2px 8px rgba(108, 92, 231, 0.08) !important;
+    outline: none !important;
+}
+
+/* ═══════════════════════════════════════════
+   RADIO / SELECT — 胶囊/卡片式
+   ═══════════════════════════════════════════ */
+.stRadio > div[role="radiogroup"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+}
+.stRadio > div[role="radiogroup"] > label {
+    background: #ffffff !important;
+    border: 1.5px solid #E8E8F0 !important;
+    border-radius: 12px !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.25s ease !important;
+    cursor: pointer !important;
+    font-weight: 500 !important;
+    color: #6B7280 !important;
+}
+.stRadio > div[role="radiogroup"] > label:hover {
+    border-color: #A29BFE !important;
+    background: #F0EDFF !important;
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.1) !important;
+}
+.stRadio > div[role="radiogroup"] > label[data-selected="true"] {
+    background: linear-gradient(135deg, #6C5CE7 0%, #5A4BD1 100%) !important;
+    color: #ffffff !important;
+    border-color: #6C5CE7 !important;
+    box-shadow: 0 4px 16px rgba(108, 92, 231, 0.35) !important;
+}
+.stRadio > div[role="radiogroup"] > label[data-selected="true"] p {
+    color: #ffffff !important;
+}
+
+.stSelectbox > div > div {
+    border-radius: 16px !important;
+    border: 2px solid #E8E8F0 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.04) !important;
+}
+.stSelectbox > div > div:hover {
+    border-color: #A29BFE !important;
+}
+.stSelectbox > div > div:focus-within {
+    border-color: #6C5CE7 !important;
+    box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.12) !important;
+}
+
+/* ═══════════════════════════════════════════
+   FILE UPLOADER — 虚线圆角拖拽区
+   ═══════════════════════════════════════════ */
+[data-testid="stFileUploader"] {
+    background: #ffffff !important;
+    border: 2px dashed #C4B5FD !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    transition: all 0.3s ease !important;
+    text-align: center !important;
+}
+[data-testid="stFileUploader"]:hover {
+    border-color: #6C5CE7 !important;
+    background: #FAF9FF !important;
+    box-shadow: 0 8px 24px rgba(108, 92, 231, 0.1) !important;
+}
+[data-testid="stFileUploader"] section {
+    color: #6B7280 !important;
+}
+
+/* ═══════════════════════════════════════════
+   EXPANDER — 自定义卡片式展开面板
+   ═══════════════════════════════════════════ */
+[data-testid="stExpander"] {
+    background: #ffffff !important;
+    border: 1px solid #E8E8F0 !important;
+    border-radius: 18px !important;
+    box-shadow: 0 4px 16px rgba(108, 92, 231, 0.04) !important;
+    overflow: hidden !important;
+    transition: box-shadow 0.3s ease !important;
+}
+[data-testid="stExpander"]:hover {
+    box-shadow: 0 8px 28px rgba(108, 92, 231, 0.08) !important;
+}
+[data-testid="stExpander"] summary {
+    font-weight: 600 !important;
+    color: #1E1E2E !important;
+    padding: 0.75rem 1rem !important;
+}
+
+/* ═══════════════════════════════════════════
+   SCROLLBAR — 细半透明紫色
+   ═══════════════════════════════════════════ */
+::-webkit-scrollbar {width: 6px !important; height: 6px !important;}
+::-webkit-scrollbar-track {background: transparent !important;}
+::-webkit-scrollbar-thumb {
+    background: rgba(108, 92, 231, 0.25) !important;
+    border-radius: 999px !important;
+}
+::-webkit-scrollbar-thumb:hover {background: rgba(108, 92, 231, 0.4) !important;}
+
+/* ═══════════════════════════════════════════
+   ALERTS & INFO BOXES
+   ═══════════════════════════════════════════ */
+.stAlert {border-radius: 16px !important; box-shadow: 0 4px 16px rgba(108, 92, 231, 0.06) !important;}
+.stAlert [data-testid="stNotification"] {border-radius: 16px !important;}
+
+/* ═══════════════════════════════════════════
+   SIDEBAR — 紫色渐变背景
+   ═══════════════════════════════════════════ */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #F0EDFF 0%, #E8E4FF 30%, #F7F8FC 100%) !important;
+    border-right: 1px solid #E8E0F8 !important;
+}
+[data-testid="stSidebar"] h1 {color: #4A3F8A !important;}
+[data-testid="stSidebar"] .stRadio > div {
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+[data-testid="stSidebar"] .stRadio > div[role="radiogroup"] > label {
+    background: rgba(255,255,255,0.7) !important;
+}
+[data-testid="stSidebar"] .stRadio > div[role="radiogroup"] > label:hover {
+    background: rgba(255,255,255,0.95) !important;
+    border-color: #6C5CE7 !important;
+}
+[data-testid="stSidebar"] .stRadio > div[role="radiogroup"] > label[data-selected="true"] {
+    background: linear-gradient(135deg, #6C5CE7, #5A4BD1) !important;
+}
+
+/* ═══════════════════════════════════════════
+   EMBED MODE — Sidebar toggle button
+   ═══════════════════════════════════════════ */
+button[aria-label="Open sidebar"] {
+    position: fixed !important; top: 1rem !important; left: 1rem !important; z-index: 9999 !important;
+    background-color: rgba(108, 92, 231, 0.12) !important; border-radius: 50% !important;
+    width: 2.5rem !important; height: 2.5rem !important;
+    box-shadow: 0 4px 16px rgba(108, 92, 231, 0.15) !important; backdrop-filter: blur(8px) !important;
+}
 button[aria-label="Close sidebar"] {display: none !important;}
-.block-container {padding-top: 0 !important;padding-bottom: 1rem !important;max-width: 95% !important;}
-h1 {margin-top: 0.5rem !important;}
+
+/* ═══════════════════════════════════════════
+   MAIN CONTENT AREA
+   ═══════════════════════════════════════════ */
+.block-container {
+    padding-top: 0 !important;
+    padding-bottom: 2rem !important;
+    max-width: 96% !important;
+}
+
+/* ═══════════════════════════════════════════
+   HERO SECTION — 紫色渐变 + 装饰光晕
+   ═══════════════════════════════════════════ */
+.xb-hero {
+    background: linear-gradient(135deg, #4A3F8A 0%, #6C5CE7 40%, #A29BFE 100%);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(108, 92, 231, 0.3);
+}
+.xb-hero::before {
+    content: '';
+    position: absolute;
+    top: -60%; right: -10%;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(162, 155, 254, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.xb-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50%; left: -8%;
+    width: 250px; height: 250px;
+    background: radial-gradient(circle, rgba(108, 92, 231, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.xb-hero-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+    margin: 0 0 0.3rem 0;
+    position: relative;
+    z-index: 1;
+}
+.xb-hero-subtitle {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.3px;
+}
+
+/* ═══════════════════════════════════════════
+   FEATURE CARDS — 网格布局 hover上浮
+   ═══════════════════════════════════════════ */
+.xb-card-desc {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+    text-align: center;
+    margin-top: -0.6rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+}
+/* 功能卡片按钮 — 白色卡片hover紫色边框+上浮 */
+div[data-testid="column"] .stButton > button {
+    border-radius: 18px;
+    padding: 0.9rem 0.6rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1.5px solid #E8E8F0;
+    background: #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 12px rgba(108, 92, 231, 0.04);
+    color: #1E1E2E !important;
+}
+div[data-testid="column"] .stButton > button:hover {
+    border-color: #A29BFE;
+    box-shadow: 0 8px 24px rgba(108, 92, 231, 0.12);
+    transform: translateY(-3px);
+    background: #ffffff;
+    color: #6C5CE7 !important;
+}
+
+/* ═══════════════════════════════════════════
+   PAGE HEADER
+   ═══════════════════════════════════════════ */
+.xb-page-header {
+    margin-bottom: 1.5rem;
+}
+.xb-page-header-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.25rem;
+}
+.xb-page-header-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1E1E2E;
+    margin: 0 0 0.25rem 0;
+}
+.xb-page-header-desc {
+    font-size: 0.9rem;
+    color: #9CA3AF;
+    font-weight: 400;
+}
+.xb-page-divider {
+    height: 3px;
+    background: linear-gradient(90deg, #6C5CE7, #A29BFE, transparent);
+    border: none;
+    margin: 0.75rem 0 1.5rem 0;
+    border-radius: 999px;
+}
+
+/* ═══════════════════════════════════════════
+   SEARCH RESULT CARD — 左侧紫色竖条标识
+   ═══════════════════════════════════════════ */
+.xb-result-card {
+    background: #ffffff;
+    border: 1px solid #E8E8F0;
+    border-radius: 18px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 12px rgba(108, 92, 231, 0.03);
+    transition: all 0.3s ease;
+    border-left: 4px solid #6C5CE7;
+}
+.xb-result-card:hover {
+    box-shadow: 0 8px 28px rgba(108, 92, 231, 0.08);
+    border-color: #C4B5FD;
+    transform: translateX(2px);
+}
+.xb-result-rank {
+    display: inline-block;
+    background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    width: 26px; height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 8px;
+    margin-right: 0.75rem;
+    vertical-align: middle;
+}
+.xb-result-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #1E1E2E;
+    display: inline;
+}
+.xb-result-meta {
+    margin: 0.5rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #6B7280;
+}
+.xb-result-meta span {
+    color: #6B7280;
+}
+.xb-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.xb-badge-high {background: #EDE9FE; color: #4A3F8A;}
+.xb-badge-mid {background: #FEF3C7; color: #92400E;}
+.xb-badge-low {background: #FEE2E2; color: #991B1B;}
+
+/* ═══════════════════════════════════════════
+   EMPTY STATE
+   ═══════════════════════════════════════════ */
+.xb-empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #9CA3AF;
+}
+.xb-empty-state-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.45;
+}
+.xb-empty-state-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #6B7280;
+}
+
+/* ═══════════════════════════════════════════
+   METRIC CARDS (st.metric override)
+   ═══════════════════════════════════════════ */
+[data-testid="stMetric"] {
+    background: #ffffff;
+    border: 1px solid #E8E8F0;
+    border-radius: 18px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 2px 12px rgba(108, 92, 231, 0.04);
+}
+[data-testid="stMetric"] label {color: #6B7280 !important; font-weight: 500 !important;}
+
+/* ═══════════════════════════════════════════
+   CHECKBOX
+   ═══════════════════════════════════════════ */
+.stCheckbox label {color: #4A4A63 !important; font-weight: 500 !important;}
+
+/* ═══════════════════════════════════════════
+   SPINNER — 紫色旋转器
+   ═══════════════════════════════════════════ */
+.stSpinner > div {border-top-color: #6C5CE7 !important;}
+
+/* ═══════════════════════════════════════════
+   DIVIDER OVERRIDE
+   ═══════════════════════════════════════════ */
+hr {border-color: #E8E8F0 !important;}
+
+/* ═══════════════════════════════════════════
+   EMBED NAV — 紫色渐变导航栏
+   ═══════════════════════════════════════════ */
+.embed-nav-container {
+    background: linear-gradient(135deg, #4A3F8A 0%, #6C5CE7 100%);
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 24px rgba(108, 92, 231, 0.25);
+}
+
+/* ═══════════════════════════════════════════
+   TABS — 自定义tab样式 (st.tabs override)
+   ═══════════════════════════════════════════ */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 4px;
+    background: transparent;
+}
+.stTabs [data-baseweb="tab"] {
+    border-radius: 12px 12px 0 0;
+    padding: 0.5rem 1.2rem;
+    font-weight: 500;
+    color: #6B7280;
+    background: transparent;
+    border: none;
+}
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background: #ffffff;
+    color: #6C5CE7;
+    font-weight: 600;
+    box-shadow: 0 -2px 8px rgba(108, 92, 231, 0.06);
+}
+
+/* ═══════════════════════════════════════════
+   INFO BOX — 紫色左边框信息框
+   ═══════════════════════════════════════════ */
+.stAlert [data-testid="stNotification"] {
+    border-left: 4px solid #6C5CE7 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
-st.title(lang["main_title"])
-st.markdown("---")
+# ==============================================================================
+# 🎨 视觉辅助函数
+# ==============================================================================
+def page_header(icon, name_key, desc_key=""):
+    """渲染统一的功能页面标题区"""
+    nl = LANG_PACK[st.session_state.language]
+    name = nl.get(name_key, name_key)
+    desc = nl.get(desc_key, "") if desc_key else ""
+    st.markdown(f"""
+    <div class="xb-page-header">
+        <div class="xb-page-header-icon">{icon}</div>
+        <div class="xb-page-header-name">{name}</div>
+    </div>
+    """, unsafe_allow_html=True)
+    if desc:
+        st.markdown(f'<div class="xb-page-header-desc">{desc}</div>', unsafe_allow_html=True)
+    st.markdown('<hr class="xb-page-divider">', unsafe_allow_html=True)
+
+def render_hero():
+    nl = LANG_PACK[st.session_state.language]
+    st.markdown(f"""
+    <div class="xb-hero">
+        <div class="xb-hero-title">{nl["main_title"]}</div>
+        <div class="xb-hero-subtitle">{nl["subtitle"]}</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+def render_feature_cards():
+    """在首页展示11个功能卡片 — 统一样式、点击切换功能"""
+    nl = LANG_PACK[st.session_state.language]
+    features = [
+        ("🔍", "search", "menu_search_label", "menu_search_sub"),
+        ("💡", "summary", "menu_summary_label", "menu_summary_sub"),
+        ("📝", "generate", "menu_generate_label", "menu_generate_sub"),
+        ("📈", "compare", "menu_compare_label", "menu_compare_sub"),
+        ("✏️", "rewrite", "menu_rewrite_label", "menu_rewrite_sub"),
+        ("🌐", "translate", "menu_translate_label", "menu_translate_sub"),
+        ("💾", "pdf2word", "menu_pdf2word_label", "menu_pdf2word_sub"),
+        ("📊", "dashboard", "menu_dashboard_label", "menu_dashboard_sub"),
+        ("🏢", "assessment", "menu_assessment_label", "menu_assessment_sub"),
+        ("🛡️", "compliance", "menu_compliance_label", "menu_compliance_sub"),
+        ("📖", "about", "menu_about_label", "menu_about_sub"),
+    ]
+    # 3列网格 — 用 styled st.button 统一展示（既是卡片也是交互入口）
+    for row_start in range(0, len(features), 3):
+        cols = st.columns(3)
+        for i in range(3):
+            idx = row_start + i
+            if idx >= len(features):
+                break
+            icon, tab_id, name_key, desc_key = features[idx]
+            name = nl.get(name_key, name_key)
+            desc = nl.get(desc_key, "")
+            with cols[i]:
+                btn_label = f"{icon}  {name}"
+                if st.button(btn_label, key=f"fc_{tab_id}", use_container_width=True):
+                    st.session_state.selected_tab = tab_id
+                    st.rerun()
+                # 按钮下方显示描述
+                st.markdown(f'<div class="xb-card-desc">{desc}</div>', unsafe_allow_html=True)
 
 # ==============================================================================
 # 🔧 Session State 初始化
@@ -2275,9 +3023,25 @@ if "compliance_trace_result" not in st.session_state:
     st.session_state.compliance_trace_result = None
 
 # ==============================================================================
-# 📂 侧边栏 — 语言切换 + 功能导航
+# 📂 导航系统 — 嵌入模式 vs 常规模式
 # ==============================================================================
-with st.sidebar:
+embed_mode = False
+try:
+    params = st.query_params
+    embed_mode = params.get("embed", "") == "true"
+except Exception:
+    pass
+
+if embed_mode:
+    # ── 嵌入模式：隐藏侧边栏，只用语言切换 + 功能卡片 ──
+    # 完全隐藏 Streamlit 默认侧边栏
+    st.markdown("""
+    <style>
+    [data-testid="stSidebar"] { display: none; }
+    section[data-testid="stSidebarContent"] { display: none; }
+    </style>
+    """, unsafe_allow_html=True)
+    # 语言切换（顶部水平排列）
     st.radio(
         lang["lang_select"],
         options=["zh", "en"],
@@ -2285,22 +3049,45 @@ with st.sidebar:
         key="language",
         horizontal=True
     )
-    st.divider()
-    st.header(lang["sidebar_title"])
-    if st.session_state.selected_tab == "":
-        st.session_state.selected_tab = MENU_LABELS[0]
-    st.radio(
-        lang["select_func"],
-        MENU_LABELS,
-        key="selected_tab",
-        label_visibility="visible"
-    )
-    st.markdown("---")
-    st.info(lang["sidebar_footer"])
+else:
+    # ── 常规模式：侧边栏导航 ──
+    with st.sidebar:
+        st.radio(
+            lang["lang_select"],
+            options=["zh", "en"],
+            format_func=lambda x: "中文" if x == "zh" else "English",
+            key="language",
+            horizontal=True
+        )
+        st.divider()
+        st.header(lang["sidebar_title"])
+        if st.session_state.selected_tab == "":
+            st.session_state.selected_tab = MENU_LABELS[0]
+        st.radio(
+            lang["select_func"],
+            MENU_LABELS,
+            key="selected_tab",
+            label_visibility="visible"
+        )
+        st.markdown("---")
+        st.markdown(
+            f'''<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(108,92,231,0.06);border-radius:12px;font-size:12px;color:#6C5CE7;margin-top:8px;">
+                <span>{lang["sidebar_copyright"]}</span>
+                <span style="background:rgba(108,92,231,0.12);padding:3px 10px;border-radius:8px;font-weight:500;">{lang["sidebar_version"]}</span>
+            </div>''',
+            unsafe_allow_html=True
+        )
 
 # ==============================================================================
 # 🚀 功能路由：根据侧边栏选择渲染对应功能页面
 # ==============================================================================
+# Hero 区：两种模式都显示（精简版，仅标题+副标题）
+render_hero()
+
+# 功能卡片：仅在嵌入模式 + 未选择功能时显示（嵌入模式唯一导航入口）
+if embed_mode and not st.session_state.selected_tab:
+    render_feature_cards()
+
 if st.session_state.selected_tab:
     selected_item = MENU_MAP.get(st.session_state.selected_tab)
     if selected_item:
